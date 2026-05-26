@@ -1,0 +1,12 @@
+id,category,serial,description,user,status
+1688915497426,El Bol Bol,BOLBOLSERIAL,A7a| ya nas bolboly ma3adsh yo2of{nl}ha{nl}ha{nl}ha,farah,closed
+1688927527522,HEPA,FoRSerial,Filter is not powering on,farah,closed
+1688929029503,TestCat,TEST555,test 1,farah,closed
+1688929040630,TestCat,SSSTETS,test 2,farah,closed
+1688929054220,HEPA,FoTSerial,Need spare parts,farah,open
+1688929067942,HEPA,FoHSerial,Wearing out,farah,open
+1688942094285,Bed,98765,Bengarab el sareer aho{nl}JOJA,farah,closed
+1689111131422,AED,987654,missing part,amr,open
+1689115180951,AED,OUT-9390A-R,device missing part,amr,open
+1689115219271,HEPA,FoTSerial,device missing part,amr,open
+1689115245380,EKG,XYZ9876,device missing part,amr,open

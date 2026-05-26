@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+  <link rel="stylesheet" href="general.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+  <!-- <script
+    src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"></script> -->
+  <!-- <script type="text/javascript" src="data_chart.js"></script> -->
+  <title>front page</title>
+
+  <style>
+    body{
+      background:  #fcf7ff;
+    }
+  </style>
+
+  <script type="text/javascript">
+    function newCat(val){
+     var element=document.getElementById('other');
+     if(val=='other'){element.style.display='block'; element.required=true;}
+     else{element.style.display='none'; element.required=false;}
+    }
+
+    function newDep(val){
+     var element=document.getElementById('otherDep');
+     if(val=='other'){element.style.display='block'; element.required=true;}
+     else{element.style.display='none'; element.required=false;}
+    }
+    </script> 
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/Health_Flow.png"/ width="100" height="100"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample03">
+        <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/engineer">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/viewreporteng">Action Center</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/viewAssets">View Assets</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Manage Assets</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+              <li><a class="dropdown-item" href="/add_asset">Add Asset</a></li>
+              <li><a class="dropdown-item" href="/Remove_asset">Remove Asset</a></li>
+              <li><a class="dropdown-item" href="/Renew_Device_Service_Contract">Renew Device Service Contract</a></li>
+              <li><a class="dropdown-item" href="/ppm">PPM</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button class="logout" style="width: 140px;" onclick="location.href='/changePass';">Change Pass</button>
+    <button class="logout" onclick="location.href='/logout';">Log out</button>
+  </nav>
+
+  <div class="container mt-4">
+    <h2>Add Asset</h2>
+    <form id="assetForm" method="POST" action='/add_asset'>
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select class="form-select" id="category" name="category" onchange='newCat(this.value);' required>
+          <option value="" disabled selected hidden>Select a category</option>
+          {{categories}}
+          <option value="other">Other</option>
+          <input type="text" placeholder="New category" class="form-control" name="other" id="other" style='display:none;'/>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="deviceName" class="form-label">Device Name</label>
+        <input type="text" class="form-control" id="deviceName" name="deviceName" required>
+      </div>
+      <div class="mb-3">
+        <label for="department" class="form-label">Department</label>
+        <select class="form-select" id="department" name="department" onchange='newDep(this.value);' required>
+          <option value="" disabled selected hidden>Select a department</option>
+          {{departments}}
+          <option value="other">Other</option>
+          <input type="text" placeholder="New department" class="form-control" name="otherDep" id="otherDep" style='display:none;'/>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input class="form-control" id="location" name="location" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input class="form-control" id="description" name="description" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="manufacturer" class="form-label">Manufacturer</label>
+        <input type="text" class="form-control" id="manufacturer" name="manufacturer" required>
+      </div>
+      <div class="mb-3">
+        <label for="manufacturingDate" class="form-label">Manufacturing Date</label>
+        <input type="date" class="form-control" id="manufacturingDate" name="manufacturingDate" required>
+      </div>
+      <div class="mb-3">
+        <label for="model" class="form-label">Model</label>
+        <input type="text" class="form-control" id="model" name="model" required>
+      </div>
+      <div class="mb-3">
+        <label for="serial" class="form-label">Serial</label>
+        <input type="text" class="form-control" id="serial" name="serial" required>
+      </div>
+      <div class="mb-3">
+        <label for="warrantyEndDate" class="form-label">Warranty End Date</label>
+        <input type="date" class="form-control" id="warrantyEndDate" name="warrantyEndDate" required>
+      </div>
+      <div class="mb-3">
+        <label for="agent" class="form-label">Agent</label>
+        <input type="text" class="form-control" id="agent" name="agent" required>
+      </div>
+      <div class="mb-3">
+        <label for="countryOfOrigin" class="form-label">Country of Origin</label>
+        <input type="text" class="form-control" id="countryOfOrigin" name="countryOfOrigin" required>
+      </div>
+      <div class="mb-3">
+        <label for="purchasingDate" class="form-label">Purchasing Date</label>
+        <input type="date" class="form-control" id="purchasingDate" name="purchasingDate" required>
+      </div>
+      <div class="mb-3">
+        <label for="installationDate" class="form-label">Installation Date</label>
+        <input type="date" class="form-control" id="installationDate" name="installationDate" required>
+      </div>
+      <div class="mb-3">
+        <label for="purchasingPrice" class="form-label">Purchasing Price</label>
+        <input type="number" class="form-control" id="purchasingPrice" name="purchasingPrice" required>
+      </div>
+      <div class="mb-3">
+        <label for="purchasingMethod" class="form-label">Purchasing Method</label>
+        <select class="form-select" id="purchasingMethod" name="purchasingMethod" required>
+          <option value="Cash">Cash</option>
+          <option value="Credit">Credit</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="serviceContract" class="form-label">Service Contract</label>
+        <select class="form-select" id="serviceContract" name="serviceContract">
+            <option value="With S.P">With S.P</option>
+            <option value="Without S.P">Without S.P</option>
+            <option value="N">N</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="serviceContractCompany" class="form-label">Service Contract Company</label>
+        <input type="text" class="form-control" id="serviceContractCompany" name="serviceContractCompany">
+      </div>
+      <div class="mb-3">
+        <label for="serviceContractValue" class="form-label">Service Contract Value</label>
+        <input type="number" class="form-control" id="serviceContractValue" name="serviceContractValue">
+      </div>
+      <div class="mb-3">
+        <label for="serviceContractEndDate" class="form-label">Service Contract End Date</label>
+        <input type="date" class="form-control" id="serviceContractEndDate" name="serviceContractEndDate">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <script
+      src="js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+.card {
+  align-self: center;
+  background-color: #6c63ff;
+  color: white;
+  border-radius: 10px;
+  width: 70%;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.list-group-item:nth-child(even) {
+  background-color: #bebaf5;
+}
+
+.list-group-item:hover {
+  background-color: #6c63ff;
+  color: white;
+  font-weight: bold;
+}

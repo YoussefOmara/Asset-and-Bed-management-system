@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="/css/bootstrap.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  />
+    
+    <link rel="stylesheet" href="/asset_detail.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"></script> -->
+    <!-- <script type="text/javascript" src="data_chart.js"></script> -->
+    <title>Asset Detail</title>
+  </head>
+  <body>
+    <nav
+    class="navbar navbar-expand-lg navbar-dark p-3 bg-danger"
+    id="headerNav"
+  >
+    <div class="container-fluid">
+      <a class="navbar-brand d-block d-lg-none" href="#">
+        <img src="/static_files/images/logos/logo_2_white.png" height="80" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link mx-2 active" aria-current="page" href="#"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="#">Contact us</a>
+          </li>
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link mx-4" href="#">
+              <img
+                src="../public/png-clipart-logo-health-care-hospital-direct-primary-care-health-blue-text-thumbnail-removebg-preview.png"
+                height="80"
+              />
+              Health Flow
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link mx-2 dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Company
+            </a>
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li><a class="dropdown-item" href="Assets_u.html">Assets</a></li>
+              <li><a class="dropdown-item" href="Charts_data.html">Charts</a></li>
+              <li><a class="dropdown-item" href="report.html">Report</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- <div class="container" style="text-align: center; font-size: 3rem">
+    <div>Health Flow</div>
+  </div> -->
+
+  <section>
+      <div style="text-align: center; margin: 15px; font-size: 2.5rem;">Asset Detail</div>
+
+
+  </section>
+  <div class="row">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://storage.googleapis.com/avante/images/339-1-philips-heartstart-aed.jpg" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">Philips HeartStart AED - Onsite Automated External Defibrillator</p>
+      <h10>Quantity:3</h10><br>
+      <h10>Departments:ICU</h10>
+
+    </div>
+  </div>
+
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://storage.googleapis.com/avante/images/250/13039-1-heartsine-samaritan-pad-350p_250.jpg" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">HeartSine Samaritan PAD 350P AED</p>
+      <h10>Quantity:2</h10><br>
+      <h10>Departments:ICU</h10>
+    </div>
+  </div>
+  </div>
+
+
+  <script
+  type="module"
+  src="../public/asset_detail.js"
+  
+  ></script>
+
+  <script
+      src="js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="../public/Assets_u.css" /> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"></script> -->
+    <!-- <script type="text/javascript" src="data_chart.js"></script> -->
+    <title>Nurse home page</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark p-3 bg-danger"
+      id="headerNav"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand d-block d-lg-none" href="#">
+          <img src="/static_files/images/logos/logo_2_white.png" height="80" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-2 active" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="\my_sql_node\views\issue_submmission.html">Issue a Report</a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link mx-4" href="#">
+                <img
+                  src="../public/png-clipart-logo-health-care-hospital-direct-primary-care-health-blue-text-thumbnail-removebg-preview.png"
+                  height="80"
+                />
+                Health Flow
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="Beds.html">View Beds</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link mx-2 dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                more
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="Assets_u.html">Assign patient</a></li>
+                <li><a class="dropdown-item" href="\my_sql_node\views\Assets_u.html">view all Assets</a></li>
+                <li><a class="dropdown-item" href="Scan_QR.html">Scan QR code</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <h2 style="text-align: center; margin: 15px;">Nurse Data</h2>
+      <div class="container">
+        <h3>Displaying a CSV file in Bootstrap Table</h3>
+        <br>
+        <br>
+        <!-- table to display the csv data -->
+        <table class="table table-bordered table-striped" id="display_csv_data"></table>
+     </div>
+      <!-- <div id="cards">
+      </div> -->
+      <!-- <div class="card" id="cards-container" style="width: 18rem; margin: 30px;">
+        <img class="card-img-top" src="depositphotos_213659488-stock-illustration-picture-profile-icon-human-people.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div> -->
+    </section>
+    <script>
+      // Get the CSV file.
+       // Method to load a CSV file and display it in the table
+       function loadCSV() {
+        fetch('nurse.csv')
+          .then(response => response.text())
+          .then(csvData => {
+            //Here calling another method to read CSV file into json
+            csvFileToJSON(csvData);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      }
+       
+      //Method to read csv data and convert it into JSON 
+      function csvFileToJSON(csvData){
+          try {
+            var jsonData = [];
+            var headers = [];
+            var rows = csvData.split("\r\n");               
+            for (var i = 0; i < rows.length; i++) {
+                var cells = rows[i].split(",");
+                var rowData = {};
+                for(var j=0;j<cells.length;j++){
+                    if(i==0){
+                        var headerName = cells[j].trim();
+                        headers.push(headerName);
+                    }else{
+                        var key = headers[j];
+                        if(key){
+                            rowData[key] = cells[j].trim();
+                        }
+                    }
+                }
+                 
+                if(i!=0){
+                    jsonData.push(rowData);
+                }
+            }
+              
+            //displaying the json result into table
+            displayJsonToTable(jsonData);
+          } catch(e){
+            console.error(e);
+          }
+      }
+       
+      //Method to display the data in Table
+      function displayJsonToTable(jsonData){
+        var table=document.getElementById("display_csv_data");
+        if(jsonData.length>0){
+            var headers = Object.keys(jsonData[0]);
+            var htmlHeader='<thead><tr>';
+             
+            for(var i=0;i<headers.length;i++){
+                htmlHeader+= '<th>'+headers[i]+'</th>';
+            }
+            htmlHeader+= '<tr></thead>';
+             
+            var htmlBody = '<tbody>';
+            for(var i=0;i<jsonData.length;i++){
+                var row=jsonData[i];
+                htmlBody+='<tr>';
+                for(var j=0;j<headers.length;j++){
+                    var key = headers[j];
+                    htmlBody+='<td>'+row[key]+'</td>';
+                }
+                htmlBody+='</tr>';
+            }
+            htmlBody+='</tbody>';
+            table.innerHTML=htmlHeader+htmlBody;
+        }else{
+            table.innerHTML='There is no data in CSV';
+        }
+      }
+      
+      // Example usage: Call the loadCSV() function to load the data.csv file
+      loadCSV();
+       
+      </script>
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="../public/Charts_data.js"></script> -->
+</body>
+</html>

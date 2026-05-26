@@ -1,0 +1,3 @@
+deviceName,department,location,last_ppm_done_date,description,manufacturer,manufacturingDate,model,serial,status,warrantyPeriod,warrantyEndDate,agent,countryOfOrigin,purchasingDate,installationDate,purchasingPrice,purchasingMethod,serviceContract,serviceContractCompany,serviceContractValue,service_period_in_years,patient_assigned,REP_maintainancehistory
+Test01,C4,,,Test Run,Hohos,01/07/2023,Jin,TEST555,FF,,09/07/2023,Tester,None,04/07/2022,04/01/2023,555,Cash,N,,,,500,<br>10/07/2023| 22:02:49| salah| Problem description: Need Spare Parts| Action taken: 
+Test02,Cardiology,,,KOKO,Gi,02/07/2023,SDSA,SSSTETS,FF,,11/07/2022,SDS,DDD,04/07/2023,04/01/2023,222,Credit,N,,,,500,<br>10/07/2023| 22:02:56| salah| Problem description: Need Spare Parts| Action taken: 

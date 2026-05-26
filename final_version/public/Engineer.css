@@ -1,0 +1,162 @@
+
+.chart-title {
+  text-align: center;
+  margin-top: 75px;
+  margin-bottom: auto;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.chart-item {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.chart-canvas {
+  width: 100%; /* Set the width to 100% to occupy the full width of the parent container */
+  height: 250px; /* Adjust the height as needed */
+}
+
+#reportStatusChart {
+  height: 300px; /* Adjust the height as needed */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allow the cards to wrap to the next line if needed */
+  justify-content: space-between;
+  /* flex-direction: column;
+  justify-content: flex-start; */
+}
+
+
+.card-title{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.card {
+  flex: 0 0 calc(50% - 10px);
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+  border: 2px solid #dc3545;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 200px; /* Set a fixed height for the card */
+}
+.card::-webkit-scrollbar {
+  width: 10px;
+}
+
+.card::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+#device-list li, #device-list-2 li {
+  margin-bottom: 5px;
+}
+.carousel-control-prev-icon.dark-icon,
+.carousel-control-next-icon.dark-icon {
+  filter: invert(1);
+}
+
+.carousel-caption {
+  text-align: center;
+}
+
+h3 {
+  color: black;
+}
+
+#occvsnonocc {
+  height: 25px;
+  /* max-width: 150px;  */
+  margin: 0 auto;
+}
+
+
+/* 
+#occvsnonChart {
+  height: 100px;
+  width: 1000px;
+} */
+
+
+
+#occ{
+  margin:0 auto;
+
+  height: 500px;
+  width: 500px;
+}
+
+
+/* Styling for the notification button */
+#notificationButton {
+  position: absolute;
+  right: 10px; /* Adjust the right position to position the button */
+  display: inline-block;
+  padding: 12px;
+  margin-right: 300px;
+  font-size: 20px;
+  background-color: #ccc;
+  color: #333;
+  border-radius: 40px;
+  cursor: pointer;
+  z-index: 9999;
+}
+#notificationButton:hover {
+  background-color: #bbb;
+}
+
+.notification-item {
+  border-bottom: 2px solid #ccc; /* Add a border line between notification items */
+  padding-bottom: 8px; /* Adjust the padding as needed */
+}
+
+#notificationCount {
+  position: absolute;
+  top: -10px; /* Adjust the positioning as needed */
+  right: 0;
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 10px;
+  background-color: red; /* Customize the background color */
+  color: white; /* Customize the text color */
+  font-size: 12px; /* Customize the font size */
+}
+
+.ticket-status {
+  color: blue; /* Customize the color for ticket status notifications */
+}
+
+.ppm-device {
+  color: rgb(22, 124, 4); /* Customize the color for PPM device notifications */
+}

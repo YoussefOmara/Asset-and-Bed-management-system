@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../public/occupancy_reserved.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"></script> -->
+    <!-- <script type="text/javascript" src="data_chart.js"></script> -->
+    <title>front page</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark p-3 bg-danger"
+      id="headerNav"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand d-block d-lg-none" href="#">
+          <img src="/static_files/images/logos/logo_2_white.png" height="80" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-2 active" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">s</a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link mx-4" href="#">
+                <img
+                  src="../public/png-clipart-logo-health-care-hospital-direct-primary-care-health-blue-text-thumbnail-removebg-preview.png"
+                  height="80"
+                />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link mx-2 dropdown-toggle"
+                 href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Company
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="Assets_u.html">Assets</a></li>
+                <li><a class="dropdown-item" href="Charts_data.html">Charts</a></li>
+                <li><a class="dropdown-item" href="occupancy_reserved.html">Occupancy</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container" style="text-align: center; font-size: 3rem">
+      <div>BioPsy</div>
+      <h2 style="text-align: center; font-size: 2.5rem;">Occupancy and reserved Beds
+    </h2>
+    </div>
+    <section>
+        <h1>Reserved Devices</h1>
+  <div style="width: 50%">
+    <canvas id="devices-chart"></canvas>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Device Name</th>
+        <th>Patient Name</th>
+        <th>Reserved At</th>
+        <th>Reserved Until</th>
+      </tr>
+    </thead>
+    <tbody id="reserved-devices-table">
+    </tbody>
+  </table>
+    </section>
+    <section>
+        <h1>Hospital Statistics</h1>
+        <h2>Admissions by Month</h2>
+        <div style="width: 50%">
+          <canvas id="admissions-chart"></canvas>
+        </div>
+        <h2>Discharges by Month</h2>
+        <div style="width: 50%">
+          <canvas id="discharges-chart"></canvas>
+        </div>
+        <h2>Occupancy by Department</h2>
+        <div style="width: 50%">
+          <canvas id="occupancy-chart"></canvas>
+        </div>
+    </section>
+    <div class="container_bedschart" style="display: flex;width: 50%; height: 50%;">
+      <canvas id="bedsChart"></canvas>
+    </div>
+    <div class="container_bedschart" style="display: flex;width: 50%; height: 50%;">
+      <canvas id="uptimeChart"></canvas>
+    </div>
+    <!-- <div class="container_bedschart" style="display: flex;width: 50%; height: 50%;">
+      <canvas id="bedsChart"></canvas>
+    </div> -->
+    
+    <script>
+      var ctx = document.getElementById('uptimeChart').getContext('2d');
+      var uptimeChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          datasets: [{
+            label: 'Uptime',
+            data: [10, 12, 11, 13, 14, 15, 16],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          }, {
+            label: 'Downtime',
+            data: [2, 0, 1, 0, 0, 0, 1],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+<script>
+  var ctx = document.getElementById('bedsChart').getContext('2d');
+  var bedsChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+      datasets: [{
+        label: 'Total occupied beds per month',
+        data: [150, 120, 170, 200, 190, 145, 210],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+    <script src="../public/occupancy_reserved.js"></script>
+    <script
+    src="js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"
+  ></script>
+  </body>
+</html>

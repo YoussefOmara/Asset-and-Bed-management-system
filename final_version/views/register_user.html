@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Register_User</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet"  href="register_user.css">
+        <!-- <script src="app.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    </head>
+    <body>
+      <div class="form">
+        <!-- <img src="hospital-logo-design-vector-medical-cross_53876-136743.avif" style="width: 80px;" alt=""> -->
+        <div class="title"><p style="font-size: 45px;"><span style="color:red">B</span>ioPsy</p>
+          <img src="hospital-logo-design-vector-medical-cross_53876-136743.avif" style="width: 80px;" alt="">
+        </div>
+        <form action="register_user" method="POST">
+          <div class="subtitle">Create your User account!</div>
+          <div class="input-container ic1">
+            <input id="Name" class="input" type="text" placeholder=" " name="Name"/>
+            <div class="cut"></div>
+            <label for="Name" class="placeholder">Name</label>
+          </div>
+          <div class="input-container ic2">
+            <input id="Email" class="input" type="text" placeholder=" " name="Email"/>
+            <div class="cut"></div>
+            <label for="Email" class="placeholder">Email</label>
+          </div>
+          <div class="input-container ic2">
+            <input id="Password" class="input" type="text" placeholder=" " name="Password"/>
+            <div class="cut cut-short"></div>
+            <label for="Password" class="placeholder">Password</label>
+          </div>
+          <div class="input-container ic2">
+            <input id="Confirm_Password" class="input" type="text" placeholder=" " name="Confirm_Password"/>
+            <div class="cut cut-shxort"></div>
+            <label for="Confirm_Password" class="placeholder"> Confirm Password</label>
+          </div>
+          <div class="input-container ic2">
+            <input id="email" class="input" type="text" placeholder=" " name="Department"/>
+            <div class="cut cut-short"></div>
+            <label for="email" class="placeholder"> Department</label>
+          </div>
+          <div class="input-container ic2">
+            <input id="Hosptial" class="input" type="text" placeholder=" " name="Hospital"/>
+            <div class="cut cut-short"></div>
+            <label for="Hosptial" class="placeholder"> Hosptial</label>
+          </div>
+          <div class="container">
+            <p style="color: white; margin:15px; float: left;"> Profession</p>
+            <div class="radio-btn">
+                <input type="radio"  name="Profession" id="Doctor" value="Profession_D">
+                <label for="Doctor">Doctor</label>
+            </div>
+            <div class="radio-btn">
+                <input type="radio"  name="Profession" id="Nurse" value="Profession_N">
+                <label for="Nurse">Nurse</label>
+            </div>
+          </div>
+          <button type="text" class="submit">submit</button>
+      </form>
+      
+      </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="" ></script>
+    </body>
+</html>

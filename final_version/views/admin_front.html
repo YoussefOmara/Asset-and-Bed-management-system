@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="css/bootstrap.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  />
+    
+    <link rel="stylesheet" href="../public/admin_front.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"></script> -->
+    <!-- <script type="text/javascript" src="data_chart.js"></script> -->
+    <title>admin front page</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark p-3 bg-danger"
+      id="headerNav"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand d-block d-lg-none" href="#">
+          <img src="/static_files/images/logos/logo_2_white.png" height="80" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-2 active" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">Contact us</a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link mx-4" href="#">
+                <img
+                  src="../public/png-clipart-logo-health-care-hospital-direct-primary-care-health-blue-text-thumbnail-removebg-preview.png"
+                  height="80"
+                />
+                Health Flow
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link mx-2 dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Company
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="Assets_u.html">Assets</a></li>
+                <li><a class="dropdown-item" href="Charts_data.html">Charts</a></li>
+                <li><a class="dropdown-item" href="report.html">Report</a></li>
+                <!-- <input type="text"> -->
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- <div class="container" style="text-align: center; font-size: 3rem">
+      <div>Health Flow</div>
+    </div> -->
+
+    <section>
+        <div style="text-align: center; margin: 15px; font-size: 2.5rem;">Admin View</div>
+
+
+    </section>
+
+
+    <section>
+        <div class="c">
+        <div class="con1">
+        <canvas id="myChart_1" height="150"></canvas>
+        </div>
+        <div class="con2">
+            <canvas id="myChart_2" height="150"></canvas>
+          </div>
+    </div>
+    </section>
+    <hr style="width:50%; margin: auto; border: solid black 3px;color: black;">
+    
+    <section class="container" style="margin: 100px auto 100px auto;" >
+        <div class="row" style="margin: 20px; padding: 20px;">
+            <div class="col-md _1">
+                <div class="t1">Datascope 90T missing spare part</div>
+                <div class="c1">report id:89898 <br>
+
+                    equipment id: 59853 <br>
+                    user id:565233 <br>
+                    descirption: missing
+                    <br>
+                    <span class="Status_o Status_c"style="background-color: red;color:white">status:Closed</span> 
+                    <br>
+                    <a href=""><button class="take_action">Take an Action</button></a>
+                   </div>
+        </div>
+            <div class="col-md _2">
+                <div class="t2">Datex Ohmeda S/5 Monitor device flawed</div>
+                <div class="c2">report id:421454 <br>
+
+                    equipment id: 421434 <br>
+                    user id:1235 <br>
+                    descirption: flawed device
+                    <br>
+                    <span class="Status_o Status_c" style="background-color: red;color:white">status:Closed</span>
+                    <br>
+                    <a href=""><button class="take_action">Take an Action</button></a>
+
+                    </div>
+        </div>
+            <div class="col-md _3">
+                <div class="t3">Avante Puma V6 Anesthesia Ventilator device shuts down</div>
+                <div class="c3">report id:421454 <br>
+
+                    equipment id: 51355 <br>
+                    user id:5314124 <br>
+                    descirption: device shuts down </div> <br>
+                    <span class="Status_o Status_c" style="background-color: green;color:white" style="margin:
+                    -5px;">status:Opened</span>
+                    <br>
+                    <a href=""><button class="take_action">Take an Action</button></a>
+
+        </div>
+        </div>
+        <div class="row" style="margin: 20px;  padding: 20px;">
+            <div class="col-md _4">
+                <div class="t4">Stryker 1069 Eye Stretcher
+</div>
+                <div class="c4">report id:3124 <br>
+
+                    equipment id: 312321 <br>
+                    user id:323231 <br>
+                    descirption: wheel not working</div>
+                    <br>
+                    <span class="Status_o Status_c"style="background-color: green;color: white">status:Opened</span>
+                    <br>
+                    <a href=""><button class="take_action">Take an Action</button></a>
+
+            </div>
+            <div class="col-md _5">
+                <div class="t5">GE Innova 3100 Cath/Angio System
+                </div>
+                <div class="c5">report id:432542 <br>
+
+                    equipment id: 12321 <br>
+                    user id:4214 <br>
+                    descirption: device is flawed </div>
+                    <br>
+                    <span class="Status_o Status_c"style="background-color: green;color:white">status:Opened</span>
+                    <br>
+                    <a href=""><button class="take_action">Take an Action</button></a>
+
+            </div>
+            <div class="col-md _6">
+                <div class="t6">Avante D750 Birthing Bed
+                </div>
+                <div class="c6">report id:4353425
+                   <br>
+
+                    equipment id: 1245124 <br>
+                    user id:6547645 <br>
+                    descirption: device is flawed </div>
+                    <br>
+                    <span class="Status_o Status_c" style="background-color: green; color:white">status:Opened</span>
+                    <br>
+                    <a href=""><button class="take_action">Take an Action</button></a>
+                </div>
+
+            </div>
+        </div>
+        
+        
+    </section>
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">Something</h1>
+            
+        <h2>Contact</h2>
+        
+        <address>
+          5534 Somewhere In. The World 22193-10212<br>
+              
+          <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+        </address>
+      </div>
+      
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Media</h2>
+    
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Online</a>
+            </li>
+    
+            <li>
+              <a href="#">Print</a>
+            </li>
+                
+            <li>
+              <a href="#">Alternative Ads</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav__item nav__item--extra">
+          <h2 class="nav__title">Technology</h2>
+          
+          <ul class="nav__ul nav__ul--extra">
+            <li>
+              <a href="#">Hardware Design</a>
+            </li>
+            
+            <li>
+              <a href="#">Software Design</a>
+            </li>
+            
+            <li>
+              <a href="#">Digital Signage</a>
+            </li>
+            
+            <li>
+              <a href="#">Automation</a>
+            </li>
+            
+            <li>
+              <a href="#">Artificial Intelligence</a>
+            </li>
+            
+            <li>
+              <a href="#">IoT</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav__item">
+          <h2 class="nav__title">Legal</h2>
+          
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="legal">
+        <p>&copy; 2019 Something. All rights reserved.</p>
+        
+        <div class="legal__links">
+          <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+        </div>
+      </div>
+    </footer>
+    <script
+    type="module"
+    src="../public/admin_front.js"
+    
+    ></script>
+
+    <script
+      src="js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    </body>
+</html>

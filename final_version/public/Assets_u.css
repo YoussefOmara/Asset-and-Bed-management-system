@@ -1,0 +1,360 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #dadadad9;
+}
+.assets_beds{
+    /* border: 1px solid black; */
+    height: 1000px;
+    margin: 20px;
+    padding: 15px;
+}
+.conatiner {
+	width: 100%;
+	height: 250px;
+}
+.wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+}
+
+.box {
+	margin: 10px;
+	width: 300px;
+	height: 250px;
+	text-align: center;
+	border-radius: 3px;
+	-webkit-transition: 200ms ease-in-out;
+	-o-transition: 200ms ease-in-out;
+	transition: 200ms ease-in-out;
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	        box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.box:hover {
+	margin-bottom: -10px;
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.7);
+	        box-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+.box h1 {
+	color: #fff;
+	padding: 30px;
+	margin-top: 100px;
+	text-align: center;
+	font-weight: 100;
+	font-size: 25px;
+	background: rgba(0,0,0,0.8);
+	-webkit-box-shadow: 0 0 30px rgba(0,0,0,0.7);
+	        box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+
+.date h4 {
+	color: #fff;
+	font-weight: 300;
+	text-align: center;
+	letter-spacing: 3px;
+	text-shadow: 0 0 3px rgba(0,0,0,0.9);
+}
+.poster {
+	width: 130px;
+	height:130px;
+	margin: 120px auto;
+	position: relative;
+	border-radius: 100px;
+}
+.poster h4 {
+	top: 16px;
+	color: #fff;
+	position: relative;
+	font-size: 80px;
+	text-align: center;
+	font-weight: 100;
+}
+.one {
+	background: url('https://www.researchgate.net/publication/323336872/figure/fig2/AS:596763413053445@1519290893886/Automated-External-Defibrillator-device.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.two {
+	background: url('https://www.aedusa.com/knowledge/wp-content/uploads/2020/08/when-was-the-defibrillator-invented.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.three {
+	background: url('https://cdn.linak.com/-/media/images/applications/main/hospital-beds-application.jpg?bc=white&as=1&h=750&iar=0&w=750&rev=8fbd93a0-9b7f-414d-a886-fe9f3c09c00d&quality=75&hash=1B4AFD55D6B39F1244D2829F49C7766D');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.five {
+	background: url('https://www.zeiss.com/content/dam/z/med/reference-master/product-portfolio/surgical-microscopes/ophthalmic-microscopes/images/zeiss_lumera-t_lumera-700_ophthalmic-microscopes-2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.six {
+	background: url('https://a1props.com/wp-content/uploads/2020/05/Heart-Lung-Bypass-Machine.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.seven {
+	background: url('https://www.narang.com/diagnostic-equipments-products/ecg-machine/images/digital-3-6-channel-ecg-dp2030.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.eight {
+	background: url('https://cdn.shopify.com/s/files/1/0112/3316/5374/products/image1_11_032521.jpg?v=1616706949');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.nine {
+	background: url('https://marketing.webassets.siemens-healthineers.com/75002a60e66e64b6/c4870fdc6f1a/v/ec2869a4fe72/ACUSON_SC2000_Internet.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.ten {
+	background: url('https://storage.googleapis.com/avante/images/avante-milano-e20-upright.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.eleven {
+	background: url('https://www.harvardapparatus.com/media/catalog/product/cache/62fea656a0c51c97eb54cff2b4efba4c/v/a/vaporizer.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.tlv {
+	background: url('https://storage.googleapis.com/avante/images/2150-1-dre-echo-co2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.thirteen {
+	background: url('https://www.endoscopy-tower.com/wp-content/uploads/2019/11/FM134_WOM_Schoelly_web-1024x547.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.fourteen{
+    background: url('https://www.narang.com/hospital-medical-furniture/examination-table/images/electric-examination-table-hf1908.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.fifteen{
+    background: url('https://cdn.shopify.com/s/files/1/0410/8333/8911/products/fetal-doppler-the-best-at-home-prenatal-fetal-heart-doppler-490005.png?v=1660239226&width=600');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.sixteen{
+    background: url('https://advanced-inst.com/wp-content/uploads/2019/11/Fetal-Monitor-2.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.seventeen{
+    background: url('https://www.stille.se/wp-content/uploads/2019/12/1160x1160_imagiq2table1-768x768.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.eighteen{
+    background: url('https://storage.googleapis.com/avante/images/250/1918-1-olympus-gif-q160-adult-video-gastroscope_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.nineteen{
+    background: url('https://storage.googleapis.com/avante/images/250/271-1-sarns-7000_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.twenty{
+    background: url('https://storage.googleapis.com/avante/images/250/2406-1-bovie-derm-101_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.twenty_one{
+    background: url('https://storage.googleapis.com/avante/images/250/1862-1-hill-rom-totalcare_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.twenty_two{
+    background: url('https://storage.googleapis.com/avante/images/250/1738-1-drager-air-shields-isolette-c2000_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.twenty_three{
+    background: url('https://storage.googleapis.com/avante/images/250/2209-1-ohmeda-panda-infant-warmer_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.twenty_four{
+    background: url('https://storage.googleapis.com/avante/images/wlh4W1bGcDpmaasa12LRrtHyrRtKfM26ro5u9mQi.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.twenty_five{
+    background: url('https://www.endoscopy-tower.com/wp-content/uploads/2019/11/FM134_WOM_Schoelly_web-1024x547.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.twenty_six{
+    background: url('https://storage.googleapis.com/avante/images/250/1743-1-datascope-97e_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.twenty_seven{
+    background: url('https://rukminim1.flixcart.com/image/416/416/jvo4scw0/laboratory-centrifuge/y/y/b/medical-doctor-laboratory-centrifuge-machine-capacity-8x15-ml-original-imafggscprbyzqzk.jpeg?q=70');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.twenty_eight{
+    background: url('https://storage.googleapis.com/avante/images/250/2300-1-accu-scope-3025_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.twenty_nine{
+    background: url('https://storage.googleapis.com/avante/images/T2ApZAGiX6UoIMZ3SlnU7cyUQzSYCZ1Gx4HeStHY.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.thirty{
+    background: url('https://storage.googleapis.com/avante/images/250/2082-1-dre-la-540_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.thirty_one{
+    background: url('https://storage.googleapis.com/avante/images/250/498-1-medical-gas-zone-valve-box_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.thirty_two{
+    background: url('https://storage.googleapis.com/avante/images/250/2026-1-westar-4069_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.thirty_three{
+    background: url('https://storage.googleapis.com/avante/images/250/13455-1-stainless-steel-anesthesia-cart_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.thirty_four{
+    background: url('https://storage.googleapis.com/avante/images/wH6f1ZGPux3ARHk3ULKpYOXPUGXvZ2nET56uysmq.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.thirty_five{
+    background: url('https://storage.googleapis.com/avante/images/mE6vT5IDVhb4uioZafRaGE9HsOsvsDBfSlGvlJ1r.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.thirty_six{
+    background: url('https://storage.googleapis.com/avante/images/avante-millennium-5-upright.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.thirty_seven{
+    background: url('https://storage.googleapis.com/avante/images/Novaerus_Defend_1050-Angle.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.thirty_eight{
+    background: url('https://storage.googleapis.com/avante/images/250/2158-1-philips-intellivue-mp50_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.thirty_nine{
+    background: url('https://storage.googleapis.com/avante/images/250/1674-1-siemens-maquet-servo-i_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.fourty{
+    background: url('https://storage.googleapis.com/avante/images/250/12567-1-kendall-9525_250.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.fourty_one{
+    background: url('https://storage.googleapis.com/avante/images/avante-milano-e20-upright.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.issue_form{
+    text-align: center;
+    padding: 15px;
+    margin:15px;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../public/Assets_u.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"></script> -->
+    <!-- <script type="text/javascript" src="data_chart.js"></script> -->
+    <title>Nurse home page</title>
+    
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark p-3 bg-danger"
+      id="headerNav"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand d-block d-lg-none" href="#">
+          <img src="/static_files/images/logos/logo_2_white.png" height="80" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-2 active" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="issue_submmission.html">Issue a Report</a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link mx-4" href="#">
+                <img
+                  src="../public/png-clipart-logo-health-care-hospital-direct-primary-care-health-blue-text-thumbnail-removebg-preview.png"
+                  height="80"
+                />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">View Beds</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link mx-2 dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                more
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="Assets_u.html">Assign patient</a></li>
+                <li><a class="dropdown-item" href="Assets_u.html">view all Assets</a></li>
+                <li><a class="dropdown-item" href="Scan_QR.html">Scan QR code</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1 class="title">Hospital Beds</h1>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Bed Number</th>
+          <th>Department</th>
+          <th>Room</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="beds-table">
+      </tbody>
+    </table>
+    <button id="add-bed-button">Add Bed</button>
+    <div id="add-bed-form" style="display:none;">
+      <label for="bed-number">Bed Number:</label>
+      <input type="number" id="bed-number" name="bed-number"><br><br>
+      <label for="department">Department:</label>
+      <input type="text" id="department" name="department"><br><br>
+      <label for="room">Room:</label>
+      <input type="text" id="room" name="room"><br><br>
+      <button id="submit-bed-button">Submit</button>
+    </div>
+    <script src="../public/Beds.js"></script>
+    <script
+      src="js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>

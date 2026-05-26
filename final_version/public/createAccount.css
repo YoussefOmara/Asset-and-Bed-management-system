@@ -1,0 +1,19 @@
+.logout {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #EAC9FF;
+    border: none;
+    border-radius: 4px;
+    width: 100px;
+    margin-right: 40px;
+    transition: background-color 0.3s ease;
+  }
+  
+.logout:hover {
+    background-color: #555;
+}
+  
+.logout:focus {
+    outline: none;
+}
